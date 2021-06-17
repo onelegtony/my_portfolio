@@ -1,0 +1,87 @@
+.join-main {
+    min-height: 84vh;
+    display: flex;
+    flex-direction: column;
+
+    .join-container {
+        max-width: 90%;
+        margin: auto;
+        @include flexbox(column, center, center);
+        text-align: center;
+        flex: 1;
+
+        .join-header {
+            flex: 1
+        }
+
+        .form-container {
+            flex: 4;
+            max-width: 75%;
+            margin-top: 3rem;
+            height: 100%;
+
+            .form-box {
+                background-color: $main-white;
+                @include flexbox(row, center, center);
+                padding: 1rem;
+
+                .form-column-left,
+                .form-column-right {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    h1 {
+         margin: 1% 0;
+         font-weight: weight(light);
+         color: $accent-color;
+    }
+
+    h3 {
+        font-weight: weight(light);
+    }
+}
+
+.inputs,
+.join-btn {
+    width: 350px;
+    height: 50px;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+}
+
+.inputs {
+    border-bottom: 2px solid $main-black;
+    background-color: rgb(223, 223, 223);
+    
+    &::placeholder {
+        color: $main-black;
+        font-weight: weight(light);
+    }
+}
+
+.join-btn {
+    background-color: $accent-color;
+    color: $main-white;
+    font-weight: weight(bold);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(1);
+    }
+}
+
+#packages {
+    font-weight: weight(light);
+}

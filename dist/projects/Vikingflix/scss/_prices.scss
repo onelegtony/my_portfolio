@@ -1,0 +1,99 @@
+//========================= Prices, main section styles =========================//
+
+.prices-main {
+    background: url('../img/prices-bg.jpg') top no-repeat;
+    background-size: cover;
+    min-height: 84vh;
+    @include flexbox(column, flex-end, center);
+    position: relative;
+
+    .wave-bg {
+        width: 100%;
+        position: absolute;
+        top: -20%;
+
+        img {
+            width: 100%;
+        }
+
+        h1 {
+            position: absolute;
+            bottom: 30%;
+            left: 5%;
+            font-size: 3.5rem;
+            cursor: default;
+        }
+    }
+
+    .cards {
+        @include flexbox(row, space-between, center);
+        margin-bottom: 6vh;
+        height: 35vh;
+        width: 90%;
+
+        .card {
+            background-color: $main-black-transparent;
+            width: 25%;
+            height: 100%;
+            @include flexbox(column, space-around, center);
+            backdrop-filter: blur(2px);
+            text-align: center;
+
+            h2:first-child {
+                color: $accent-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+//========================= Global footer styles =========================//
+
+footer {
+    width: 100%;
+    height: 6vh;
+    background-color: $main-black;
+    @include flexbox(row, center, center);
+    border-top: 2px solid $main-white;
+
+    .footer-container  {
+        width: 90%;
+        position: relative;
+        @include flexbox(row, center, center);
+        font-weight: weight(light);
+        font-size: 0.875rem;
+
+        #copyright {
+            position: absolute;
+            left: 0;
+            cursor: default;
+            font-size: 0.5rem;
+        }
+
+        #joinFooter {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $accent-color;
+            padding: 0.2rem 1rem;
+            border: 2px solid transparent;
+            transition: all 300ms ease-in-out;
+
+            &:hover {
+                background-color: $main-black;
+                border: 2px solid $accent-color;
+            }
+        }
+
+        #pricesHome {
+            position: absolute;
+            right: 0;
+            transition: all 300ms ease-in-out;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+}

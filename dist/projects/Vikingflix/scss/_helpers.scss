@@ -1,0 +1,22 @@
+@function weight($weight-name) {
+    @return (map-get($font-weights, $weight-name));
+}
+
+@mixin flexbox($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin responsive-down($screenSize) {
+    @media only screen and (max-width: (map-get($breakpoints-down, $screenSize))) {
+        @content;
+    }
+}
+
+@mixin responsive-up($screenSize) {
+    @media only screen and (min-width: (map-get($breakpoints-up, $screenSize))) {
+        @content;
+    }
+}

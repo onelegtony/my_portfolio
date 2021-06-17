@@ -1,0 +1,55 @@
+.about-page {
+    transition: all 500ms ease-in-out;
+}
+
+.about-container {
+    min-height: 100vh;
+    max-width: 1440px;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+    padding: 0 5%;
+
+    .about-title {
+        width: 85%;
+        height: 50%;
+        padding: 15px 40px;
+        transition: all 500ms ease-in-out;
+        border-radius: 10px;
+        margin: 5% 0;
+    
+        h1 {
+            text-align: center;
+        }
+    
+        p {
+            line-height: 1.7;
+            padding-bottom: 3%;
+        }
+    }
+    
+    .skills-box {
+        text-align: center;
+        margin-bottom: 5%;
+    
+        .all-boxes {
+            gap: 30px;
+            flex-wrap: wrap;
+    
+            .boxes {
+                width: 180px;
+                height: 180px;
+                margin: 20px;
+                flex-direction: column;
+                gap: 15px;
+                transition: all 500ms ease-in-out;
+                border-radius: 10px;
+    
+                & > img {
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+

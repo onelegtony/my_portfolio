@@ -1,0 +1,601 @@
+//========================= Max-width: 1280px =========================//
+@media screen and (max-width: 1280px) {
+    // Join page form
+    .join-main .join-container .form-container {
+        min-width: 90%;
+    }
+}
+
+
+//========================= Max-width: 1024px =========================//
+
+@include responsive-down(large) {
+    // Landing page
+    .front-main {
+        @include flexbox(row, center, flex-end);
+
+        &::after {
+            display: none;
+        }
+
+        .hero-container {
+            background-color: $main-black-transparent;
+            padding-bottom: 2rem;
+            backdrop-filter: blur(2px);
+            @include flexbox(column, center, center);
+            flex: 1;
+
+            .cta-container {
+                @include flexbox(column, center, center);
+
+                img {
+                    width: 100%;
+                }
+
+                .cta-button {
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .support-text {
+                margin-top: 1.3rem;
+                text-align: center;
+                max-width: 60vw;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Prices page
+    body .prices-main {
+        .wave-bg {
+            top: -10%;
+
+            h1 {
+                bottom: 35%;
+                font-size: 2.7rem;
+            }
+        }
+
+        .cards {
+
+            .card {
+                width: 30%;
+            }
+        }
+    }
+
+    // Discover page
+    .discover-hero .discover-icons {
+        .discover-card {
+            min-width: 200px;
+
+            .disc-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }  
+    }
+
+    .discover-movies .posterContainer {
+        width: 150%;
+    }
+
+    // Join page form
+    .join-main .join-container .form-container {
+        min-width: 90%;
+        margin-bottom: 2rem;
+
+        .form-box {
+            flex-direction: column;
+
+            .inputs,
+            .join-btn {
+                width: 90%;
+            }
+        }
+    }
+}
+
+
+//========================= Max-width: 720px =========================//
+
+@include responsive-down(medium) {
+    // Main page + Prices page
+    .support-text p {
+        font-size: 1.1rem;
+    }
+
+    body {
+        .main-header .main-nav {
+            width: 80%;
+
+            ul li {
+                width: 100%;
+            }
+        }
+
+        .prices-main {
+            min-height: 100vh;
+    
+            .wave-bg {
+                top: 0;
+    
+                h1 {
+                    bottom: 50%;
+                    font-size: 2.5rem;
+                }
+            }
+    
+            .cards {
+                @include flexbox(column, space-between, stretch);
+                gap: 1rem;
+                flex: 1;
+                margin-top: 35%;
+    
+                .card {
+                    width: 100%;
+                    padding: 1rem 0;
+                }
+            }
+        }
+        
+        .main-header {
+            & > .main-nav {
+                width: 55%;
+            }
+        }
+    }
+
+    #copyright {
+        font-size: 0.5rem;
+    }
+
+    // Discover page
+    .discover-hero .discover-icons {
+        flex-direction: column;
+
+        .discover-card {
+            min-width: 200px;
+
+            .disc-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }  
+    }
+
+    .discover-movies .posterContainer {
+        width: 200%;
+    }
+
+    // About page
+    .about-main .container {
+        grid-template: repeat(3, 1fr) / 1fr;
+
+        .goalBox, .aboutBox {
+            min-width: 250px;
+        }
+
+        .boxes {
+            @include flexbox(column, flex-start, center);
+        }
+
+        .partnersBox {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+    }
+}
+
+
+//========================= Max-HEIGHT: 650px =========================//
+
+@media only screen and (max-height: 650px) {
+    // Main page + Prices page
+    .support-text p {
+        font-size: 1.1rem;
+    }
+
+    body {
+        .prices-main {
+            min-height: 100vh;
+    
+            .wave-bg {
+                top: 0;
+    
+                h1 {
+                    bottom: 50%;
+                    font-size: 2.5rem;
+                }
+            }
+    
+            .cards {
+                @include flexbox(column, space-between, stretch);
+                gap: 1rem;
+                flex: 1;
+                margin-top: 35%;
+    
+                .card {
+                    width: 100%;
+                    padding: 1rem 0;
+                }
+            }
+        }
+
+        footer {
+            height: 13vh;
+        }
+        
+        .main-header {
+            & > .main-nav {
+                width: 55%;
+            }
+        }
+    }
+
+    #copyright {
+        font-size: 0.5rem;
+    }
+}
+
+
+//========================= Max-width: 480px =========================//
+
+@include responsive-down(small) {
+    // Main page
+    .main-header {
+        width: 100%;
+
+        .main-nav {
+            width: 65%;
+        }
+    }
+
+    .front-main .hero-container {
+        .cta-container {
+            text-align: center;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .support-text {
+            max-width: 100%;
+        }
+    }
+
+    // Prices page
+    body {
+        .prices-main {
+            min-height: 100vh;
+    
+            .wave-bg {
+                top: 0;
+    
+                h1 {
+                    bottom: 50%;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .main-header {
+            justify-content: center;
+
+            .main-nav ul li {
+                width: 100%;
+                padding: 0 7%;
+            }
+        }
+    }
+
+    // Discover page
+    .discover-hero .discover-icons {
+        flex-direction: column;
+
+        .discover-card {
+            min-width: 200px;
+
+            .disc-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }  
+    }
+
+    .discover-movies .posterContainer {
+        width: 300%;
+        
+        .poster-box {
+            margin: 20px 10px;
+
+            .movie-title {
+                h3 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+//========================= Min-width: 1600px =========================//
+
+@include responsive-up(x-large) {
+    // Main page
+    .main-nav {
+        font-size: 1.4rem;
+    }
+
+    .cta-container {
+        flex: 2;
+
+        img {
+            width: 50%;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+        }
+
+        .cta-button a {
+            font-size: 2rem;
+            padding: 0.8rem 2.8rem;
+        }
+    }
+
+    .support-text {
+        flex: 1;
+    }
+
+    .main-nav {
+        font-size: 1.4rem;
+    }
+
+    // Prices page
+    body .prices-main .wave-bg h1 {
+        font-size: 5rem;
+    }
+
+    .cards {
+         h2 {
+             font-size: 3rem;
+         }
+
+         li {
+             font-size: 1.5rem;
+         }
+    }
+}
+
+
+//========================= Min-width: 1920px =========================//
+
+@include responsive-up(xxl) {
+    // Main page
+    .support-text p {
+        font-size: 1.6rem;
+    }
+
+    body {
+        footer .footer-container {
+            font-size: 1.4rem;
+
+            #copyright {
+                font-size: 1rem;
+            }
+        }
+    } 
+
+    // Discover page
+    .discover-hero {
+        .discover-title {
+            h1 {
+                font-size: 5rem;
+            }
+
+            h2 {
+                font-size: 4rem;
+            }
+        }
+
+        .discover-icons {
+            .discover-card {
+                min-width: 200px;
+    
+                .disc-icon {
+                    width: 100px;
+                    height: 100px;
+                }
+    
+                p {
+                    font-size: 2rem;
+                }
+            } 
+        }  
+    }
+
+    .discover-movies .posterContainer {
+        width: 100%;
+
+        .arrowBoxLeft::before {
+                width: 100px;
+                height: 100px;
+            }
+    
+        .arrowBoxRight::after {
+                width: 100px;
+                height: 100px;
+            }
+
+        .poster-box {
+            height: 500px;
+        }
+    }
+
+    // About page
+    .about-main .container .boxes {
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 2.7rem;
+        }
+
+        p, li {
+            font-size: 1.7rem;
+        }
+    }
+
+    // Join now page
+    .join-container {
+       .join-header {
+           h1 {
+               font-size: 6rem;
+           }
+
+           h3 {
+               font-size: 3rem;
+           }
+       }
+
+       .form-container .form-box {
+           height: 500px;
+
+           .inputs,
+           .join-btn {
+               width: 90%;
+           }
+       }
+    }
+}
+
+
+//========================= Min-width: 2560px =========================//
+
+@include responsive-up(huge) {
+    // Main page
+    .main-nav {
+        font-size: 2.5rem;
+    }
+
+    .cta-container {
+        h3 {
+            font-size: 3.5rem;
+        }
+
+        .cta-button {
+            margin-top: 5rem;
+
+            a {
+                font-size: 3rem;
+                padding: 1rem 5rem;
+            }
+        }
+    }
+
+    .support-text p {
+        font-size: 2.7rem;
+    }
+
+    .main-nav {
+        font-size: 2rem;
+    }
+
+    // Prices page
+    body {
+        .prices-main .wave-bg h1 {
+            font-size: 7rem;
+        }
+
+        footer .footer-container {
+            font-size: 1.5rem;
+
+            #copyright {
+                font-size: 1.2rem;
+            }
+        }
+    } 
+
+    .cards {
+         h2 {
+             font-size: 4rem;
+         }
+
+         li {
+             font-size: 2rem;
+         }
+    }
+
+    // Discover page
+    .discover-movies .posterContainer {
+        width: 100%;
+
+        .arrowBoxLeft::before {
+            width: 130px;
+            height: 130px;
+        }
+
+        .arrowBoxRight::after {
+            width: 130px;
+            height: 130px;
+        }
+
+        .poster-box {
+            height: 700px;
+        }
+    }
+
+    // About page
+    .about-main .container .boxes {
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 2.7rem;
+        }
+
+        p, li {
+            font-size: 2rem;
+        }
+    }
+
+    // Join now page
+    .join-container {
+        .join-header {
+            h1 {
+                font-size: 6rem;
+            }
+ 
+            h3 {
+                font-size: 3rem;
+            }
+        }
+ 
+        .form-container .form-box {
+            .inputs,
+            .join-btn {
+                width: 90%;
+            }
+        }
+     }
+}

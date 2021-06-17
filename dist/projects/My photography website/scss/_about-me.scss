@@ -1,0 +1,91 @@
+.about_page {
+    min-height: 100vh;
+    color: $text-color;
+    background: radial-gradient($main-light, $main-dark);
+    // background: radial-gradient($light-gradient, $dark-gradient), url("../img/city-bg.jpeg") center no-repeat;
+    // background-size: cover;
+    position: relative;
+
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 90%;
+        margin: 0 5%;
+    }
+}
+
+.aboutSection {
+    @include flexbox(row, center, flex-start);
+    padding: 5%;
+
+    .aboutMe {
+        flex: 2;
+        display: grid;
+        grid-template: 15% 1fr / 35% 1fr 1fr;
+
+        #meTitle {
+            grid-area: 1 / 1 / span 1 / -1;
+        }
+
+        #mePhoto {
+            grid-area: 2 / 1 / span 1 / span 1;
+            overflow: hidden;
+            position: relative;
+           
+            .coffeeimg {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        #meText {
+            grid-area: 2 / 2 / 3 / 4;
+            padding: 0 5%;
+            color: $text-color;
+        }
+
+        button {
+            width: 130px;
+            height: 40px;
+            color: $main-dark;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            background-color: $accent-color;
+            font-family: inherit;
+            margin-top: 30px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            @include transition-ease(0.1s);
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &:active {
+                transform: scale(1);
+            }
+        }
+    }
+
+    .contact {
+        flex: 1;
+        @include flexbox(column, space-between, center);
+        
+        #contactForm {
+            color: $text-color;
+        }
+
+        #contactImage {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                object-fit: fill;
+            }
+        }
+    }
+}

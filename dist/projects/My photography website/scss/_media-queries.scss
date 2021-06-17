@@ -1,0 +1,233 @@
+@include mobile(1024px) {
+    .nav_list {
+        justify-content: center;
+
+        li a {
+            font-size: 1.5rem;
+        }
+        
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+    .aboutSection {
+        @include flexbox(column, center, center);
+
+        .contact {
+            margin-top: 1rem;
+        }
+    }
+
+    .hero {
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: 20% 65% 5%;
+
+        &_name {
+            grid-area: 1 / 2 / 2 / 3;
+            justify-self: center;
+            text-align: center;
+            padding: 2rem;
+
+            h1 {
+                font-size: 4rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+
+            #portfolio_button {
+                display: none;
+            }
+        }
+
+        &_photo {
+            grid-area: 2 / 2 / 3 / 3;
+            max-height: 100%;
+            width: auto;
+        }
+    }
+    
+    footer {
+        height: 10vmax;
+        margin-top: 1rem;
+    }
+}
+
+
+@include mobile(950px) {
+    .hero {
+        &_photo {
+            max-height: 100%;
+            align-self: flex-start;
+    
+            img {
+                max-height: 100%;
+            }
+        }
+
+        &_name {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .aboutSection {
+        @include flexbox(column, space-between, center);
+
+        .aboutMe {
+            margin-bottom: 15%;
+
+            #meTitle {
+                text-align: center;
+            }
+
+            #mePhoto {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .contact {
+
+            #contactImage img {
+                max-width: 60%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@include mobile(600px) {
+    .portfolio_page .gridSection .gridPhotos {
+        grid-template-columns: 1fr;
+
+        .horizontal {
+            grid-column: span 1;
+        }
+    }
+}
+
+
+@include mobile(550px) {
+    .hero {
+        grid-template-rows: 30% 65% 5%;
+
+        &_name {
+            padding: 1rem;
+
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        &_photo {
+            max-height: 80%;
+            align-self: flex-start;
+        }
+    }
+
+    .nav_list li {
+        margin: 0 1rem;
+
+        a {
+            font-size: 1rem;
+        }
+    }
+    
+    footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .aboutSection .contact {
+        margin-top: 40%;
+    }
+
+    .aboutSection .aboutMe {
+        grid-template: 7% 1fr 40% / 1fr;
+
+        #meTitle {
+            grid-area: 1 / 1 / span 1 / span 1;
+        }
+
+        #mePhoto {
+            grid-area: 2 / 1 / span 1 / span 1;
+        }
+
+        #meText {
+            grid-area: 3 / 1 / span 1 / span 1;
+            padding: 5% 0;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    .hero_name {
+        h1 {
+            font-size: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 1rem;
+        }
+    }
+
+    .aboutSection {
+        p {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+
+@media only screen and (max-height: 580px) and (orientation: landscape) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
+
+    footer {
+        margin-top: 1rem;
+    }
+
+    .aboutSection {
+        @include flexbox(column, space-between, center);
+
+        .aboutMe {
+            grid-template: 7% 1fr / 35% 1fr 1fr;
+        }
+    }
+
+    .contact #contactImage {
+        width: 100%;
+        height: 100%;
+        margin-top: 2rem;
+    }
+
+    .contact #contactImage img {
+        width: 60%;
+        height: auto;
+    }
+}

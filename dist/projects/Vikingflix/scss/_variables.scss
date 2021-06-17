@@ -1,0 +1,25 @@
+$main-black: rgb(0, 0, 0);
+$main-black-transparent: rgba(0, 0, 0, 0.8);
+
+$main-white: rgb(255, 255, 255);
+$accent-color: rgb(255, 122, 66);
+
+$font-weights: (
+    "lightest": 200,
+    "light": 300,
+    "regular": 400,
+    "bold": 600,
+    "boldest": 700
+);
+
+$breakpoints-down: (
+    "small": 480px,
+    "medium": 720px,
+    "large": 1024px
+);
+
+$breakpoints-up: (
+    "x-large": 1600px,
+    "xxl": 1920px,
+    "huge": 2560px
+);

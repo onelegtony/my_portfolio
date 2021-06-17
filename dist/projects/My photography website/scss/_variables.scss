@@ -1,0 +1,21 @@
+$main-dark: rgb(29, 38, 69);
+$main-dark-opaque: rgba(29, 38, 69, 0.5);
+
+$main-light: rgb(102, 172, 242);
+
+$accent-color: rgb(97, 232, 189);
+$accent-color-opaque: rgba(97, 232, 189, 0.5);
+
+$complimentary-color: rgb(255, 216, 107);
+$text-color: rgb(255, 255, 255);
+
+$dark-gradient: rgba(29, 38, 69, 0.9);
+$light-gradient: rgba(102, 172, 242, 0.6);
+
+$font-weights: (
+    "thin": 100,
+    "regular": 400,
+    "bold": 800
+);
+
+// rgb(255, 202, 56) - darker yellow

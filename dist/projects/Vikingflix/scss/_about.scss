@@ -1,0 +1,53 @@
+//========================= About, main section styles =========================//
+
+.about-main {
+    min-height: 84vh;
+    background: url('../img/about-bg.jpg') center no-repeat;
+    background-size: cover;
+
+    .container {
+        padding: 5%;
+        display: grid;
+        grid-template: 1fr 1fr / 3fr 1fr;
+        grid-gap: 10px;
+        height: 100%;
+
+        .boxes {
+            background-color: $main-black-transparent;
+            padding: 30px;
+            @include flexbox(column, flex-start, center);
+
+            h1 {
+                font-weight: weight(light);
+                font-size: 3rem;
+                color: $accent-color;
+                text-align: center;
+                margin: 0;
+                padding: 0 0 1rem;
+            }
+
+            h2 {
+                font-weight: weight(light);
+                color: $accent-color;
+                text-decoration: underline;
+                text-align: center;
+                padding: 0 0 1rem;
+            }
+
+            p, li {
+                font-size: 1.2rem;
+                font-weight: weight(light);
+                line-height: 1.6;
+            }
+        }
+
+        .goalBox, .aboutBox {
+            min-width: 400px;
+        }
+
+        .partnersBox {
+            grid-area: 1 / 2 / span 2 / 3;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,800;1,100&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+    cursor: default;
+}
+
+h2 {
+    font-size: 1.2rem;
+    cursor: default;
+}
+
+h3 {
+    font-size: 1.4rem;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+}
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+@mixin flexbox($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin transition-ease($time) {
+    transition: all $time ease-in-out;
+}
+
+@mixin mobile($width) {
+    @media only screen and (max-width: $width) and (orientation: portrait) {
+        @content;
+    }
+}
+
+
+@import './variables';
+@import './landing';
+@import './portfolio';
+@import './about-me';
+@import './media-queries';
+
+
+.textLink {
+    color: $accent-color;
+    font-weight: weight(bold);
+    text-decoration: underline;
+}
+
+
+

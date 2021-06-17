@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alexander Cozub">
+  <meta name="description" content="Parody on Netflix streaming service, a programming practice project">
+  <meta name="keywords" content="viking netflix practice parody">
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
+  <title>Vikingflix - Join</title>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./discover.html">Discover</a></li>
+                <li><a href="./prices.html">Prices</a></li>
+            </ul>
+        </nav>
+        <a href="./index.html"><img src="./img/icons/logo.svg" alt=""></a>
+    </header>
+    
+    <section class="join-main">
+        <div class="join-container">
+            <div class="join-header">
+                <h1>Join Now</h1>
+                <h3>And get access to the biggest movies and series database in the world!</h3>
+            </div>
+            <div class="form-container">
+                <form class="form-box">
+                    <div class="form-column-left">
+                        <input type="text" name="firstName" id="firstName" class="inputs" autocomplete="off" placeholder="First Name" required>
+                        <input type="text" name="lastName" id="lastName" class="inputs" autocomplete="off" placeholder="Last Name" required>
+                        <input type="text" name="country" id="country" class="inputs" autocomplete="off" placeholder="Country" required>
+                        <select name="packages" id="packages" class="inputs" required>
+                            <option value="" disabled selected>Packages</option>
+                            <option value="starter">Starter</option>
+                            <option value="family">Family</option>
+                            <option value="premium">Premium</option>
+                        </select>
+                    </div>
+                    <div class="form-column-right">
+                        <input type="email" name="email" id="email" class="inputs" placeholder="E-Mail" autocomplete="off" required>
+                        <input type="password" name="password" id="password" class="inputs" autocomplete="off" placeholder="Password" required>
+                        <input type="password" name="passwordRepeat" id="passwordRepeat" class="inputs" autocomplete="off" placeholder="Repeat password" required>
+                        <input type="submit" class="join-btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <span id="copyright">&copy Copyright 2021.<br> All rights reserved.</span>
+            <a id="pricesHome" href="./index.html">Home</a>
+        </div>
+    </footer>
+</body>
+</html>
