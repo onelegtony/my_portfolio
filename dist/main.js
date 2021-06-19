@@ -1,3 +1,10 @@
+// Google analytics
+window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6CS5RVVMHD');
+
 // Imports from modules.
 import { socialsToggle, modesToggle, closeSocials, closeModes, openSocialsFunction, closeSocialsFunction, openModesFunction, closeModesFunction } from './modules/menus.js';
 import { lightModeButton, darkModeButton, lightModeToggle, darkModeToggle } from './modules/color_modes.js'
