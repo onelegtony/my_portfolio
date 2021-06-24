@@ -514,15 +514,6 @@ textarea,
   color: #151515;
 }
 
-.portfolio-container .portfolio-boxes .project-five #drum-machine {
-  background: url(../img/drum-proj.jpg) center no-repeat;
-  background-size: cover;
-}
-
-.portfolio-container .portfolio-boxes .project-five h3 {
-  color: white;
-}
-
 .project-info {
   position: absolute;
   top: 50%;
