@@ -101,6 +101,17 @@
                 color: $main-black;
             }
         }
+
+        .project-five {
+            #drum-machine {
+                background: url(../img/drum-proj.jpg) center no-repeat;
+                background-size: cover;
+            }
+
+            h3 {
+                color: $main-white;
+            }
+        }
     }
 }
 
