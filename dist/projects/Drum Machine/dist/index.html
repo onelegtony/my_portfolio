@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <title>Drum Machine</title>
+</head>
+<body class="flex">
+    <!-- Colored stripes that chnage height on button press -->
+    <div class="top-lights flex">
+        <div data-key="KeyA" class="stripe-1 stripes"></div>
+        <div data-key="KeyS" class="stripe-2 stripes"></div>
+        <div data-key="KeyD" class="stripe-3 stripes"></div>
+        <div data-key="KeyF" class="stripe-4 stripes"></div>
+        <div data-key="KeyG" class="stripe-5 stripes"></div>
+        <div data-key="KeyH" class="stripe-6 stripes"></div>
+    </div>
+
+    <!-- Buttons with sound attached to them -->
+    <div class="buttons-container flex">
+        <div data-key="KeyA" class="button flex">
+            <h1>A</h1>
+            <h2>Kick</h2>
+            <audio data-key="KeyA" src="./sounds/kick.wav"></audio>
+        </div>
+        <div data-key="KeyS" class="button flex">
+            <h1>S</h1>
+            <h2>Snare</h2>
+            <audio data-key="KeyS" src="./sounds/snare.wav"></audio>
+        </div>
+        <div data-key="KeyD" class="button flex">
+            <h1>D</h1>
+            <h2>Closed Hat</h2>
+            <audio data-key="KeyD" src="./sounds/closedhat.wav"></audio>
+        </div>
+        <div data-key="KeyF" class="button flex">
+            <h1>F</h1>
+            <h2>Open Hat</h2>
+            <audio data-key="KeyF" src="./sounds/openhat.wav"></audio>
+        </div>
+        <div data-key="KeyG" class="button flex">
+            <h1>G</h1>
+            <h2>Percursion 1</h2>
+            <audio data-key="KeyG" src="./sounds/perc1.wav"></audio>
+        </div>
+        <div data-key="KeyH" class="button flex">
+            <h1>H</h1>
+            <h2>Percursion 2</h2>
+            <audio data-key="KeyH" src="./sounds/perc2.wav"></audio>
+        </div>
+    </div>
+
+    <!-- Temporary info until issues are fixed in Safari -->
+    <div class="infobox">
+        <p><em>Tested in Google Chrome and Firefox.</em></p>
+    </div>
+
+    <script src="./app.js" type="text/javascript"></script>
+</body>
+</html>
