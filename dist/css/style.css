@@ -452,8 +452,8 @@ textarea,
 
 .portfolio-container .portfolio-boxes .projects {
   position: relative;
-  height: 250px;
-  width: 300px;
+  height: 400px;
+  width: 200px;
   margin-top: 50px;
   -webkit-box-align: start;
       -ms-flex-align: start;
