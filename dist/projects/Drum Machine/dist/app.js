@@ -1,3 +1,20 @@
+/*
+$buttons = $('.button');
+
+$buttons.each(function() {
+    $(this).on('click', function() {
+        $data = $(this).attr('data-key');
+        $sound = $(`audio[data-key='${$data}']`);
+        $sound[0].pause();
+        $sound[0].currentTime = 0;
+        $sound[0].play();
+        console.log($data);
+        console.log($sound[0]);
+    })
+})
+*/
+
+
 // Select all buttons from the DOM.
 const buttons = document.querySelectorAll('.button');
 
@@ -42,3 +59,4 @@ const boxPress = e => {
         stripe.style.height = '10px';
     });
 }
+
