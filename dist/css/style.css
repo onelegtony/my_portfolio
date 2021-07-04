@@ -452,8 +452,8 @@ textarea,
 
 .portfolio-container .portfolio-boxes .projects {
   position: relative;
-  height: 400px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   margin-top: 50px;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -511,6 +511,15 @@ textarea,
 }
 
 .portfolio-container .portfolio-boxes .project-four h3 {
+  color: #151515;
+}
+
+.portfolio-container .portfolio-boxes .project-five #info-screen-project {
+  background: url(../img/oslo.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.portfolio-container .portfolio-boxes .project-five h3 {
   color: #151515;
 }
 
