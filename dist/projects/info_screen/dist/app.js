@@ -19,8 +19,8 @@ const searchBox = document.querySelector('.location-search');
 let rawOffset = 3600;
 let dstOffset = 3600;
 let city = 'Oslo';
-let lat = '59.911491';
-let lng = '10.757933';
+let lng = '59.911491';
+let lat = '10.757933';
 console.log('lng in the beginning: ' + lng);
 console.log('lat in the beginning: ' + lat);
 console.log(rawOffset);
@@ -159,5 +159,5 @@ const changeBackground = async () => {
 
 /************** Show the initial data when page has loaded **************/
 window.addEventListener('load', weatherData);
-window.addEventListener('load', workingTime);
+window.addEventListener('load', timeData);
 window.addEventListener('load', changeBackground);
