@@ -69,7 +69,7 @@ const weatherData = async () => {
             temperature.innerText = Math.round(jsonResponse.main.temp);
             description.innerText = jsonResponse.weather[0].description;
             feelsLike.innerText = Math.round(jsonResponse.main.feels_like);
-            icon.src = `http://openweathermap.org/img/wn/${iconImage}@2x.png`;
+            icon.src = `https://openweathermap.org/img/wn/${iconImage}@2x.png`;
             infoLocation.innerText = jsonResponse.name + ', ' + jsonResponse.sys.country;
             timeData(); // Change time to local
         } else {
