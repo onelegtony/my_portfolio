@@ -33,6 +33,7 @@ form.addEventListener('submit', (e) => {
     const newLocation = searchBox.value; // User's search input
     city = newLocation; 
     weatherData(); // Update weather AND time to local of searched place
+    timeData();
     changeBackground();
     form.reset();
 })
