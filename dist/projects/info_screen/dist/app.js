@@ -1,6 +1,6 @@
 /************** Get elements from DOM **************/
 const pageBody = document.querySelector('.container');
-const location = document.querySelector('#location');
+const locationNow = document.querySelector('#location');
 const date = document.querySelector('#current-date');
 
 const temperature = document.querySelector('#temperature');
@@ -70,7 +70,7 @@ const weatherData = async () => {
             description.innerText = jsonResponse.weather[0].description;
             feelsLike.innerText = Math.round(jsonResponse.main.feels_like);
             icon.src = `http://openweathermap.org/img/wn/${iconImage}@2x.png`;
-            location.innerText = jsonResponse.name + ', ' + jsonResponse.sys.country;
+            locationNow.innerText = jsonResponse.name + ', ' + jsonResponse.sys.country;
             timeData(); // Change time to local
         } else {
             throw new Error('Weather request failed!');
