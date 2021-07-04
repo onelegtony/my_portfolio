@@ -84,7 +84,7 @@ const weatherData = async () => {
 const timeData = async () => {
     try {
         const url = 'https://maps.googleapis.com/maps/api/timezone/json?location=';
-        const apiKey = 'AIzaSyBysCrhC9UBBbrTiGqhL0tkqri8uWeK1sU';
+        const apiKey = 'G_API';
         const endpoint = `${lat},${lng}&timestamp=1625143866&key=${apiKey}`;
 
         const response = await fetch(url + endpoint); // proxy + url + endpoint
