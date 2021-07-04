@@ -55,7 +55,7 @@ const weatherData = async () => {
     try {
         const units = 'metric';
         const apiKey = '6333d6b8df4bf6f0a6912312b45efa59';
-        const url = 'api.openweathermap.org/data/2.5/weather?q=';
+        const url = 'http://api.openweathermap.org/data/2.5/weather?q=';
         const endpoint = `${city}&units=${units}&appid=${apiKey}`;
 
         const response = await fetch(url + endpoint); // add proxy before url if needed
