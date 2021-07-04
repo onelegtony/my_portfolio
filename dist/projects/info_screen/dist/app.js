@@ -21,6 +21,10 @@ let dstOffset = 3600;
 let city = 'Oslo';
 let lng = '59.911491';
 let lat = '10.757933';
+console.log('lng in the beginning: ' + lng);
+console.log('lat in the beginning: ' + lat);
+console.log(rawOffset);
+console.log(dstOffset);
 
 
 /************** Temporary proxy for live server **************/
@@ -33,7 +37,6 @@ form.addEventListener('submit', (e) => {
     const newLocation = searchBox.value; // User's search input
     city = newLocation; 
     weatherData(); // Update weather AND time to local of searched place
-    timeData();
     changeBackground();
     form.reset();
 })
@@ -66,6 +69,8 @@ const weatherData = async () => {
             const iconImage = jsonResponse.weather[0].icon;
             lng = jsonResponse.coord.lon; // New longitute
             lat = jsonResponse.coord.lat; // New latitude
+            console.log('inside weatherdata lng: ' + lng);
+            console.log('inside weather data lat: ' + lat);
 
             temperature.innerText = Math.round(jsonResponse.main.temp);
             description.innerText = jsonResponse.weather[0].description;
@@ -94,6 +99,9 @@ const timeData = async () => {
             // console.log(jsonResponse);
             rawOffset = jsonResponse.rawOffset;
             dstOffset = jsonResponse.dstOffset;
+
+            console.log('from timedata')
+
             workingTime(); // Make the new time update every second
         } else {
             throw new Error('Time request failed');
