@@ -64,6 +64,7 @@ h3 {
 // Container for location name and weather info.
 .head {
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
     gap: 50px;

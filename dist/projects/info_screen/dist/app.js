@@ -1,6 +1,6 @@
 /************** Get elements from DOM **************/
 const pageBody = document.querySelector('.container');
-const infoLocation = document.querySelector('#location');
+const location = document.querySelector('#location');
 const date = document.querySelector('#current-date');
 
 const temperature = document.querySelector('#temperature');
@@ -19,8 +19,8 @@ const searchBox = document.querySelector('.location-search');
 let rawOffset = 3600;
 let dstOffset = 3600;
 let city = 'Oslo';
-let lat = '59.911491';
-let lng = '10.757933';
+let lng = '59.911491';
+let lat = '10.757933';
 
 
 /************** Temporary proxy for live server **************/
@@ -55,10 +55,10 @@ const weatherData = async () => {
     try {
         const units = 'metric';
         const apiKey = '6333d6b8df4bf6f0a6912312b45efa59';
-        const url = 'https://api.openweathermap.org/data/2.5/weather?q=';
+        const url = 'api.openweathermap.org/data/2.5/weather?q=';
         const endpoint = `${city}&units=${units}&appid=${apiKey}`;
 
-        const response = await fetch(url + endpoint); // add proxy before url if needed
+        const response = await fetch(proxy + url + endpoint);
         if (response.ok) {
             const jsonResponse = await response.json();
             // console.log(jsonResponse);
@@ -69,8 +69,8 @@ const weatherData = async () => {
             temperature.innerText = Math.round(jsonResponse.main.temp);
             description.innerText = jsonResponse.weather[0].description;
             feelsLike.innerText = Math.round(jsonResponse.main.feels_like);
-            icon.src = `https://openweathermap.org/img/wn/${iconImage}@2x.png`;
-            infoLocation.innerText = jsonResponse.name + ', ' + jsonResponse.sys.country;
+            icon.src = `http://openweathermap.org/img/wn/${iconImage}@2x.png`;
+            location.innerText = jsonResponse.name + ', ' + jsonResponse.sys.country;
             timeData(); // Change time to local
         } else {
             throw new Error('Weather request failed!');
@@ -87,13 +87,12 @@ const timeData = async () => {
         const apiKey = 'AIzaSyBysCrhC9UBBbrTiGqhL0tkqri8uWeK1sU';
         const endpoint = `${lat},${lng}&timestamp=1625143866&key=${apiKey}`;
 
-        const response = await fetch(url + endpoint); // add proxy before url if needed
+        const response = await fetch(proxy + url + endpoint);
         if (response.ok) {
             const jsonResponse = await response.json();
             // console.log(jsonResponse);
             rawOffset = jsonResponse.rawOffset;
             dstOffset = jsonResponse.dstOffset;
-
             workingTime(); // Make the new time update every second
         } else {
             throw new Error('Time request failed');
