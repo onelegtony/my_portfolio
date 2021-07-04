@@ -58,7 +58,7 @@ const weatherData = async () => {
         const url = 'api.openweathermap.org/data/2.5/weather?q=';
         const endpoint = `${city}&units=${units}&appid=${apiKey}`;
 
-        const response = await fetch(proxy + url + endpoint);
+        const response = await fetch(url + endpoint); // proxy + url + endpoint
         if (response.ok) {
             const jsonResponse = await response.json();
             // console.log(jsonResponse);
@@ -87,7 +87,7 @@ const timeData = async () => {
         const apiKey = 'AIzaSyBysCrhC9UBBbrTiGqhL0tkqri8uWeK1sU';
         const endpoint = `${lat},${lng}&timestamp=1625143866&key=${apiKey}`;
 
-        const response = await fetch(proxy + url + endpoint);
+        const response = await fetch(url + endpoint); // proxy + url + endpoint
         if (response.ok) {
             const jsonResponse = await response.json();
             // console.log(jsonResponse);
