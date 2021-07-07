@@ -199,6 +199,7 @@ a {
   }
   .download {
     width: 200px;
+    bottom: 15%;
   }
   .download h5 {
     font-size: 0.7rem;
