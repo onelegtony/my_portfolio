@@ -36,8 +36,8 @@
 
         .projects {
             position: relative;
-            height: 400px; //400
-            width: 200px; //200
+            height: 200px; //400
+            width: 250px; //200
             margin-top: 50px;
             align-items: flex-start;
             text-align: center;
@@ -94,6 +94,17 @@
         .project-four {
             #photography {
                 background: url(../img/photography.jpeg) center no-repeat;
+                background-size: cover;
+            }
+
+            h3 {
+                color: $main-black;
+            }
+        }
+
+        .project-five {
+            #cities-norway {
+                background: url(../img/cities-norway.jpg) center no-repeat;
                 background-size: cover;
             }
 
