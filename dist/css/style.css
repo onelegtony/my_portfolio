@@ -523,6 +523,11 @@ textarea,
   color: #151515;
 }
 
+.portfolio-container .portfolio-boxes .project-six #calculator {
+  background: url(../img/calculator.png) center no-repeat;
+  background-size: cover;
+}
+
 .project-info {
   position: absolute;
   top: 50%;
