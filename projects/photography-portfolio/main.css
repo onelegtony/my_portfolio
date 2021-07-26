@@ -36,7 +36,7 @@ a {
 .landing_page {
   min-height: 80vh;
   color: white;
-  background: radial-gradient(rgba(102, 172, 242, 0.6), rgba(29, 38, 69, 0.9)), url("../img/city-bg.jpeg") center no-repeat;
+  background: radial-gradient(rgba(102, 172, 242, 0.6), rgba(29, 38, 69, 0.9)), url("./img/city-bg.jpeg") center no-repeat;
   background-size: cover;
 }
 

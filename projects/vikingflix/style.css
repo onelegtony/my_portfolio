@@ -449,7 +449,7 @@ h3 {
 
 .front-main {
   min-height: 90vh;
-  background: url("../img/viking-bg-crop.jpg") top no-repeat;
+  background: url("./img/viking-bg-crop.jpg") top no-repeat;
   background-size: cover;
 }
 
@@ -503,7 +503,7 @@ h3 {
 }
 
 .prices-main {
-  background: url("../img/prices-bg.jpg") top no-repeat;
+  background: url("./img/prices-bg.jpg") top no-repeat;
   background-size: cover;
   min-height: 84vh;
   display: flex;
@@ -701,7 +701,7 @@ footer .footer-container #pricesHome:hover {
 }
 
 .posterContainer .arrowBoxLeft::before {
-  content: url("../img/icons/arrow-back.svg");
+  content: url("./img/icons/arrow-back.svg");
   width: 70px;
   height: 70px;
   position: absolute;
@@ -724,7 +724,7 @@ footer .footer-container #pricesHome:hover {
 }
 
 .posterContainer .arrowBoxRight::after {
-  content: url("../img/icons/arrow-forward.svg");
+  content: url("./img/icons/arrow-forward.svg");
   width: 70px;
   height: 70px;
   position: absolute;
@@ -790,7 +790,7 @@ footer .footer-container #pricesHome:hover {
 
 .about-main {
   min-height: 84vh;
-  background: url("../img/about-bg.jpg") center no-repeat;
+  background: url("./img/about-bg.jpg") center no-repeat;
   background-size: cover;
 }
 
