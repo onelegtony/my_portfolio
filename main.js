@@ -6,8 +6,8 @@ window.dataLayer = window.dataLayer || [];
   gtag('config', 'G-6CS5RVVMHD');
 
 // Imports from modules.
-import { socialsToggle, modesToggle, closeSocials, closeModes, openSocialsFunction, closeSocialsFunction, openModesFunction, closeModesFunction } from './build/modules/menus.js';
-import { lightModeButton, darkModeButton, lightModeToggle, darkModeToggle } from './build/modules/color_modes.js'
+import { socialsToggle, modesToggle, closeSocials, closeModes, openSocialsFunction, closeSocialsFunction, openModesFunction, closeModesFunction } from './modules/menus.js';
+import { lightModeButton, darkModeButton, lightModeToggle, darkModeToggle } from './modules/color_modes.js'
 
 
 // Opening menu with socials.
