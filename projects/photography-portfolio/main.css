@@ -1,0 +1,569 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,800;1,100&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  cursor: default;
+}
+
+h2 {
+  font-size: 1.2rem;
+  cursor: default;
+}
+
+h3 {
+  font-size: 1.4rem;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+}
+
+.landing_page {
+  min-height: 80vh;
+  color: white;
+  background: radial-gradient(rgba(102, 172, 242, 0.6), rgba(29, 38, 69, 0.9)), url("../img/city-bg.jpeg") center no-repeat;
+  background-size: cover;
+}
+
+.nav {
+  width: 100%;
+  height: 10vh;
+  background-color: #1d2645;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_list {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: auto;
+}
+
+.nav li {
+  font-size: 1rem;
+  margin: 0 2rem;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.nav li a {
+  color: white;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+}
+
+.nav li a::before {
+  content: "";
+  background-color: #61e8bd;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out;
+  transform-origin: left;
+}
+
+.nav li a:hover {
+  text-shadow: 1px 1px 5px #61e8bd;
+}
+
+.nav li a:hover::before {
+  transform: scaleX(1);
+}
+
+.nav li #active-page::before {
+  content: "";
+  background-color: #61e8bd;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(1);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 5% repeat(3, 1fr) 5%;
+  grid-template-rows: 10% 1fr 10%;
+  height: 80vh;
+  margin-top: 5%;
+}
+
+.hero_name {
+  grid-area: 2 / 2 / 3 / 3;
+  align-self: flex-end;
+}
+
+.hero_name #portfolio_button {
+  width: 130px;
+  height: 40px;
+  color: #1d2645;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #61e8bd;
+  font-family: inherit;
+  margin-top: 30px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.hero_name #portfolio_button:hover {
+  transform: scale(1.1);
+}
+
+.hero_name #portfolio_button:active {
+  transform: scale(1);
+}
+
+.hero_photo {
+  grid-area: 2 / 3 / 3 / 4;
+  justify-self: center;
+  align-self: end;
+  height: 60vh;
+}
+
+.hero_photo img {
+  max-width: 100%;
+  max-height: 60vh;
+}
+
+footer {
+  width: 90%;
+  height: 10vh;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .social a {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 25px;
+}
+
+footer .social a img {
+  width: 24px;
+  height: 24px;
+  transition: all 0.1s ease-in-out;
+}
+
+footer .social a img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0px 0px 3px #61e8bd);
+}
+
+footer .social a img:active {
+  transform: scale(1);
+  filter: drop-shadow(0px 0px 2px #61e8bd);
+}
+
+footer .copyright {
+  font-weight: 100;
+  font-size: 0.5rem;
+  cursor: default;
+}
+
+footer .copyright a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.portfolio_page {
+  min-height: 80vh;
+  color: white;
+  background: radial-gradient(#66acf2, #1d2645);
+  position: relative;
+}
+
+.gridSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 5%;
+}
+
+.gridSection .gridTitle {
+  margin: 2% auto;
+}
+
+.gridSection .gridPhotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+  padding: 10px;
+  border: 1px solid #1d2645;
+}
+
+.gridSection .gridPhotos .photo {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.gridSection .gridPhotos .photo:hover {
+  transform: scale(1.02);
+}
+
+.gridSection .gridPhotos .photo:hover > div {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: all 0.4s ease-in-out;
+}
+
+.gridSection .gridPhotos .photo .imgtitle {
+  background-color: rgba(97, 232, 189, 0.5);
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+  font-size: 2.2rem;
+}
+
+.gridSection .gridPhotos .photo .imgtitle h3 {
+  padding: 5px 20px;
+  background-color: rgba(29, 38, 69, 0.5);
+}
+
+.gridSection .gridPhotos .horizontal {
+  grid-column: span 2;
+}
+
+.gridSection .gridPhotos img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+
+.about_page {
+  min-height: 100vh;
+  color: white;
+  background: radial-gradient(#66acf2, #1d2645);
+  position: relative;
+}
+
+.about_page footer {
+  position: relative;
+  bottom: 0;
+  width: 90%;
+  margin: 0 5%;
+}
+
+.aboutSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5%;
+}
+
+.aboutSection .aboutMe {
+  flex: 2;
+  display: grid;
+  grid-template: 15% 1fr / 35% 1fr 1fr;
+}
+
+.aboutSection .aboutMe #meTitle {
+  grid-area: 1 / 1 / span 1 / -1;
+}
+
+.aboutSection .aboutMe #mePhoto {
+  grid-area: 2 / 1 / span 1 / span 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.aboutSection .aboutMe #mePhoto .coffeeimg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.aboutSection .aboutMe #meText {
+  grid-area: 2 / 2 / 3 / 4;
+  padding: 0 5%;
+  color: white;
+}
+
+.aboutSection .aboutMe button {
+  width: 130px;
+  height: 40px;
+  color: #1d2645;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #61e8bd;
+  font-family: inherit;
+  margin-top: 30px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.aboutSection .aboutMe button:hover {
+  transform: scale(1.1);
+}
+
+.aboutSection .aboutMe button:active {
+  transform: scale(1);
+}
+
+.aboutSection .contact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aboutSection .contact #contactForm {
+  color: white;
+}
+
+.aboutSection .contact #contactImage {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutSection .contact #contactImage img {
+  max-width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .nav_list {
+    justify-content: center;
+  }
+  .nav_list li a {
+    font-size: 1.5rem;
+  }
+  .nav_list h1 {
+    font-size: 4rem;
+  }
+  .aboutSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutSection .contact {
+    margin-top: 1rem;
+  }
+  .hero {
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: 20% 65% 5%;
+  }
+  .hero_name {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .hero_name h1 {
+    font-size: 4rem;
+  }
+  .hero_name h2 {
+    font-size: 2rem;
+  }
+  .hero_name #portfolio_button {
+    display: none;
+  }
+  .hero_photo {
+    grid-area: 2 / 2 / 3 / 3;
+    max-height: 100%;
+    width: auto;
+  }
+  footer {
+    height: 10vmax;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 950px) and (orientation: portrait) {
+  .hero_photo {
+    max-height: 100%;
+    align-self: flex-start;
+  }
+  .hero_photo img {
+    max-height: 100%;
+  }
+  .hero_name h1 {
+    font-size: 3rem;
+  }
+  .hero_name h2 {
+    font-size: 1.5rem;
+  }
+  .aboutSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .aboutSection .aboutMe {
+    margin-bottom: 15%;
+  }
+  .aboutSection .aboutMe #meTitle {
+    text-align: center;
+  }
+  .aboutSection .aboutMe #mePhoto {
+    width: 100%;
+    height: 100%;
+  }
+  .aboutSection .aboutMe #mePhoto img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .aboutSection .contact #contactImage img {
+    max-width: 60%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  .portfolio_page .gridSection .gridPhotos {
+    grid-template-columns: 1fr;
+  }
+  .portfolio_page .gridSection .gridPhotos .horizontal {
+    grid-column: span 1;
+  }
+}
+
+@media only screen and (max-width: 550px) and (orientation: portrait) {
+  .hero {
+    grid-template-rows: 30% 65% 5%;
+  }
+  .hero_name {
+    padding: 1rem;
+  }
+  .hero_name h1 {
+    font-size: 2rem;
+  }
+  .hero_name h2 {
+    font-size: 1.2rem;
+  }
+  .hero_photo {
+    max-height: 80%;
+    align-self: flex-start;
+  }
+  .nav_list li {
+    margin: 0 1rem;
+  }
+  .nav_list li a {
+    font-size: 1rem;
+  }
+  footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .aboutSection .contact {
+    margin-top: 40%;
+  }
+  .aboutSection .aboutMe {
+    grid-template: 7% 1fr 40% / 1fr;
+  }
+  .aboutSection .aboutMe #meTitle {
+    grid-area: 1 / 1 / span 1 / span 1;
+  }
+  .aboutSection .aboutMe #mePhoto {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+  .aboutSection .aboutMe #meText {
+    grid-area: 3 / 1 / span 1 / span 1;
+    padding: 5% 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .hero_name h1 {
+    font-size: 1.5rem;
+  }
+  .hero_name h2 {
+    font-size: 1rem;
+  }
+  .aboutSection p {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-height: 580px) and (orientation: landscape) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  footer {
+    margin-top: 1rem;
+  }
+  .aboutSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .aboutSection .aboutMe {
+    grid-template: 7% 1fr / 35% 1fr 1fr;
+  }
+  .contact #contactImage {
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+  }
+  .contact #contactImage img {
+    width: 60%;
+    height: auto;
+  }
+}
+
+.textLink {
+  color: #61e8bd;
+  font-weight: 800;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=main.css.map */
