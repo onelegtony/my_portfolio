@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Style+Script&display=swap");
+:root {
+  --main-color: rgb(121, 34, 161);
+  --secondary-color: rgba(255, 196, 0, 0.796);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: 'Gowun Batang', serif;
+  background-color: var(--secondary-color);
+}
+
+.main-container {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease;
+}
+
+.main-container h1 {
+  font-family: 'Style Script', cursive;
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  padding: 20px;
+  background-color: var(--main-color);
+  color: white;
+  cursor: default;
+}
+
+.form-container {
+  width: 100%;
+  box-shadow: 3px 3px 0px var(--main-color);
+}
+
+.form-container .todo {
+  position: relative;
+  width: 100%;
+  height: 70px;
+}
+
+.form-container .todo input {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 50px;
+  font-size: 1.7rem;
+  font-family: 'Gowun Batang', serif;
+  outline: none;
+}
+
+.form-container .todo .submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  color: var(--main-color);
+  transition: all 200ms ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.form-container .todo .submit:hover {
+  transform: rotateZ(180deg) translateY(50%);
+}
+
+ul {
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+li {
+  list-style: none;
+}
+
+.new-task {
+  width: 100%;
+  min-height: 40px;
+  margin: 10px 0px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 3px 3px 0px var(--main-color);
+  border: 1px solid var(--main-color);
+  font-size: 1.5rem;
+  background-color: white;
+  transition: all 500ms cubic-bezier(0.43, -0.59, 0.33, 0.96);
+  transform: translateX(-2%) translateY(200%) rotateZ(10deg);
+  opacity: 0;
+}
+
+.new-task li {
+  flex: 1;
+  word-wrap: break-word;
+  max-width: 85%;
+}
+
+.new-task .task-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.new-task .fa-check-square,
+.new-task .fa-trash-alt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-task .fa-check-square {
+  color: #00bb1f;
+}
+
+.new-task .fa-trash-alt {
+  color: #ff4848;
+}
+
+.filter-tabs {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  box-shadow: 3px 3px 0px var(--main-color);
+}
+
+.filter-tabs button {
+  flex: 1;
+  font-family: 'Gowun Batang', serif;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.473);
+  border: 1px solid var(--main-color);
+  transition: all 200ms ease;
+}
+
+.filter-tabs button:hover {
+  background-color: white;
+}
+
+.filter-tabs .active-tab {
+  background-color: white;
+}
+
+.text-check {
+  text-decoration: line-through;
+}
+
+.task-appear {
+  transform: translateX(0%) translateY(0%) rotateZ(0deg);
+  opacity: 1;
+}
+
+.checked {
+  opacity: 0.5;
+}
+
+.removed {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.confirmation-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.confirmation-box .delete-confirmation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  box-shadow: 3px 3px 0px black;
+}
+
+.confirmation-box .delete-confirmation .confirmation-btns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.confirmation-box .delete-confirmation .confirmation-btns button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  font-family: 'Gowun Batang', serif;
+  font-size: 1.1rem;
+  box-shadow: 3px 3px 0px black;
+  cursor: pointer;
+  transition: all 100ms ease;
+}
+
+.confirmation-box .delete-confirmation .confirmation-btns button:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+.confirmation-box .delete-confirmation .confirmation-btns .delete-btn {
+  background-color: #ff4848;
+}
+
+.confirmation-box .delete-confirmation .confirmation-btns .cancel-btn {
+  background-color: #00bb1f;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    width: 100%;
+    top: 0;
+  }
+  .main-container h1 {
+    padding: 40px;
+  }
+  .filter-tabs button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .confirmation-box .delete-confirmation {
+    width: 100%;
+    height: 200px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

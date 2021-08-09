@@ -73,13 +73,9 @@
         }
 
         .project-two {
-            #timekill {
-                background: url(../img/timekiller.jpg) center no-repeat;
+            #todo {
+                background: url(../img/todo.png) center no-repeat;
                 background-size: cover;
-            }
-
-            h3 {
-                color: $main-black;
             }
         }
 
@@ -117,6 +113,22 @@
             #calculator {
                 background: url(../img/calculator.png) center no-repeat;
                 background-size: cover;
+            }
+        }
+
+        .mini-projects {
+            width: 80%;
+            margin-top: 5%;
+            text-align: center;
+
+            h3 {
+                font-weight: weight(xtra-light);
+            }
+
+            a {
+                font-weight: weight(xtra-light);
+                text-decoration: underline;
+                transition: all 500ms ease-in-out;
             }
         }
     }

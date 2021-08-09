@@ -301,8 +301,8 @@ textarea,
 }
 
 .about-container .skills-box .all-boxes .boxes {
-  width: 180px;
-  height: 180px;
+  width: 130px;
+  height: 130px;
   margin: 20px;
   flex-direction: column;
   gap: 15px;
@@ -387,13 +387,9 @@ textarea,
   top: 25%;
 }
 
-.portfolio-container .portfolio-boxes .project-two #timekill {
-  background: url(../img/timekiller.jpg) center no-repeat;
+.portfolio-container .portfolio-boxes .project-two #todo {
+  background: url(../img/todo.png) center no-repeat;
   background-size: cover;
-}
-
-.portfolio-container .portfolio-boxes .project-two h3 {
-  color: #151515;
 }
 
 .portfolio-container .portfolio-boxes .project-three #rock {
@@ -423,6 +419,22 @@ textarea,
 .portfolio-container .portfolio-boxes .project-six #calculator {
   background: url(../img/calculator.png) center no-repeat;
   background-size: cover;
+}
+
+.portfolio-container .portfolio-boxes .mini-projects {
+  width: 80%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.portfolio-container .portfolio-boxes .mini-projects h3 {
+  font-weight: 200;
+}
+
+.portfolio-container .portfolio-boxes .mini-projects a {
+  font-weight: 200;
+  text-decoration: underline;
+  transition: all 500ms ease-in-out;
 }
 
 .project-info {
