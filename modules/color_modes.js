@@ -40,6 +40,11 @@ const lightModeToggle = () => {
     for (let i = 0; i < skillsBoxes.length; i++) {
         skillsBoxes[i].classList.remove('shadow-dark');
     };
+
+    const miniProjectsText = document.querySelectorAll('.mini-projects-text');
+    miniProjectsText.forEach(el => {
+        el.classList.remove('dark-mode-text');
+    })
 }
 
 //Changing color mode from light to dark.
@@ -79,6 +84,11 @@ const darkModeToggle = () => {
     for (let i = 0; i < skillsBoxes.length; i++) {
         skillsBoxes[i].classList.add('shadow-dark');
     };
+
+    const miniProjectsText = document.querySelectorAll('.mini-projects-text');
+    miniProjectsText.forEach(el => {
+        el.classList.add('dark-mode-text');
+    })
 }
 
 
