@@ -672,12 +672,21 @@ textarea,
   .portfolio-container .portfolio-boxes .projects {
     width: 400px;
     height: 200px;
+    position: relative;
   }
   .portfolio-container .portfolio-boxes .projects h3 {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     color: white;
+  }
+  .portfolio-container .portfolio-boxes .projects .pr-2-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   .about-container .skills-box .all-boxes .boxes {
     width: 150px;
