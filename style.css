@@ -382,24 +382,24 @@ textarea,
 }
 
 .portfolio-container .portfolio-boxes .project-one #cocktail {
-  background: url(../img/cocktail-finder.png) center no-repeat;
+  background: url(./img/cocktail-finder.png) center no-repeat;
   background-size: cover;
   top: 25%;
 }
 
 .portfolio-container .portfolio-boxes .project-two #todo {
-  background: url(../img/todo.png) center no-repeat;
+  background: url(./img/todo.png) center no-repeat;
   background-size: cover;
 }
 
 .portfolio-container .portfolio-boxes .project-three #rock {
-  background: url(../img/rockpaper.png) center no-repeat;
+  background: url(./img/rockpaper.png) center no-repeat;
   background-size: contain;
   top: 10%;
 }
 
 .portfolio-container .portfolio-boxes .project-four #photography {
-  background: url(../img/photography.jpeg) center no-repeat;
+  background: url(./img/photography.jpeg) center no-repeat;
   background-size: cover;
 }
 
@@ -408,7 +408,7 @@ textarea,
 }
 
 .portfolio-container .portfolio-boxes .project-five #cities-norway {
-  background: url(../img/cities-norway.jpg) center no-repeat;
+  background: url(./img/cities-norway.jpg) center no-repeat;
   background-size: cover;
 }
 
@@ -417,7 +417,7 @@ textarea,
 }
 
 .portfolio-container .portfolio-boxes .project-six #calculator {
-  background: url(../img/calculator.png) center no-repeat;
+  background: url(./img/calculator.png) center no-repeat;
   background-size: cover;
 }
 
