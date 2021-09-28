@@ -381,8 +381,8 @@ textarea,
   cursor: default;
 }
 
-.portfolio-container .portfolio-boxes .project-one #viking {
-  background: url(../img/viking.jpg) center no-repeat;
+.portfolio-container .portfolio-boxes .project-one #cocktail {
+  background: url(../img/cocktail-finder.png) center no-repeat;
   background-size: cover;
   top: 25%;
 }
