@@ -392,10 +392,9 @@ textarea,
   background-size: cover;
 }
 
-.portfolio-container .portfolio-boxes .project-three #rock {
-  background: url(./img/rockpaper.png) center no-repeat;
-  background-size: contain;
-  top: 10%;
+.portfolio-container .portfolio-boxes .project-three #react-weather {
+  background: url(./img/react-weather.png) center no-repeat;
+  background-size: cover;
 }
 
 .portfolio-container .portfolio-boxes .project-four #photography {
