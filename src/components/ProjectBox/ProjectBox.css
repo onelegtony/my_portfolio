@@ -1,0 +1,63 @@
+.project-box-ctr {
+  background-color: var(--theme-lighter);
+  border: 1px solid var(--theme-color);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-box-ctr h4 {
+  margin: 0;
+  justify-self: flex-start;
+}
+
+.project-box-ctr hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--theme-color);
+}
+
+.project-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-btn {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  padding: 2px 16px;
+  font-weight: var(--font-light);
+  border: 1px solid transparent;
+  border-bottom: 2px solid var(--accent-color);
+  cursor: pointer;
+}
+
+.project-btn:hover {
+  font-weight: var(--font-light);
+  border: 1px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.project-buttons a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.project-technologies {
+  width: 100%;
+  color: var(--font-color);
+}
+
+.technologies-icons-ctr {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 530px) {
+  .project-btn {
+    padding: 4px 30px;
+  }
+}

@@ -1,0 +1,16 @@
+.error-page-ctr {
+  margin: auto;
+  text-align: center;
+  max-width: 1000px;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+.error-page-ctr h1 {
+  margin: 0;
+}
+
+.error-page-ctr h3 {
+  margin-top: 15px;
+  padding: 0px 35px;
+}
