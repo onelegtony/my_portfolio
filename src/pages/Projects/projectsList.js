@@ -26,7 +26,7 @@ export const projectsList = [
   {
     id: 4,
     name: 'Cities of Norway',
-    description: 'A website for getting Norwegian cities.',
+    description: 'A website for finding photos of Norwegian cities.',
     github: 'https://github.com/sashacozub/cities-of-norway',
     demo: 'https://cities-of-norway-sc.netlify.app/',
     technologies: ['javascript', 'sass', 'html'],
@@ -58,7 +58,7 @@ export const projectsList = [
   {
     id: 8,
     name: 'Find the Hat',
-    description: 'A NodeJS game. You need to get your hat.',
+    description: 'A NodeJS game. You need to find your hat.',
     github: 'https://github.com/sashacozub/find-the-hat',
     demo: '',
     technologies: ['nodejs'],
