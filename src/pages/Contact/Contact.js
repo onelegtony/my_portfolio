@@ -66,9 +66,6 @@ const Contact = () => {
       setErrors({ message: false });
     }
 
-    console.log(e.target.getAttribute('name'));
-    console.log(values);
-
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
