@@ -1,0 +1,14 @@
+.regular-btn {
+  font-size: 21px;
+  color: var(--regular-white);
+  border: none;
+  background-color: var(--accent-color);
+  height: 40px;
+  width: 180px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.regular-btn:active {
+  transform: scale(0.98);
+}

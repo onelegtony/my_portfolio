@@ -4,6 +4,7 @@ import { TextField } from '@mui/material';
 import './Contact.css';
 
 // import MessageStatusModal from './MessageStatusModal';
+import Button from '../../components/Button/Button';
 
 const initialValues = {
   name: '',
@@ -134,9 +135,7 @@ const Contact = () => {
             errors.message ? 'Message must be at least 10 characters long' : ''
           }
         />
-        <button type='submit' className='submit-btn' value='Send message'>
-          Send Message
-        </button>
+        <Button type='submit' value='Send Message' />
       </form>
       {/* <MessageStatusModal isModalOn={isModalOn} setIsModalOn={setIsModalOn} /> */}
     </section>
