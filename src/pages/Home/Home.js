@@ -27,7 +27,7 @@ const Home = () => {
           target='_blank'
           rel='noreferrer'
           className='text-link'>
-          Web Developer
+          Developer
         </a>{' '}
         based in <strong>Oslo, Norway</strong>.
         <br />
@@ -56,7 +56,6 @@ const Home = () => {
       </p>
       <h5>Here are some of the main skills I have:</h5>
       <div>
-        {/* Add skill name on hover */}
         <SiReact className='skill-icon' />
         <SiRedux className='skill-icon' />
         <SiJavascript className='skill-icon' />
