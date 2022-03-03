@@ -18,7 +18,7 @@ const About = () => {
       <h3>Developer, gamer, movies lover, geek.</h3>
       <div className='about-text-ctr'>
         <p>
-          Hi! My name is Sasha, I am a future developer based in Oslo, Norway.
+          Hi! My name is Sasha, I am a developer based in Oslo, Norway.
           <br />I have rediscovered the world of programming {codingDays} days
           ago. I am currently on a path to a career change. At the moment I am
           working in service industry, but also had a taste of sales,
