@@ -6,11 +6,11 @@ import './About.css';
 // import { codingSince } from '../../utils/codingSince';
 
 const About = () => {
-  const [codingDays, setCodingDays] = useState('____');
+  // const [codingDays, setCodingDays] = useState('____');
 
-  useEffect(() => {
-    setCodingDays(codingSince());
-  }, []);
+  // useEffect(() => {
+  //   setCodingDays(codingSince());
+  // }, []);
 
   return (
     <section className='about-page-ctr'>
