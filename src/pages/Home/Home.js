@@ -32,21 +32,13 @@ const Home = () => {
         based in <strong>Oslo, Norway</strong>.
         <br />
         I love programming and its ability to bring ideas to life!
-        <br />I am currently{' '}
-        <a
-          href='https://www.codecademy.com/profiles/sashacozub'
-          target='_blank'
-          rel='noreferrer'
-          className='text-link'>
-          learning
-        </a>{' '}
-        Full Stack Development to change careers.
+        <br />I am currently studying Computer Science to change careers.
         <br />
         Check out my{' '}
         <Link to='/projects' className='text-link'>
           projects
         </Link>{' '}
-        to see some of my latest work!
+        to see some of my work!
         <br />
         Or just send me a{' '}
         <Link to='/contact' className='text-link'>
