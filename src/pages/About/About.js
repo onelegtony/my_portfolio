@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './About.css';
 
-import { codingSince } from '../../utils/codingSince';
+// import { codingSince } from '../../utils/codingSince';
 
 const About = () => {
   const [codingDays, setCodingDays] = useState('____');
