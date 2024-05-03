@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './ProjectBox.css';
+import nextjs_icon from '../../static/nextjs_icon.png';
 
 import {
   SiReact,
@@ -11,6 +12,7 @@ import {
   SiSass,
   SiCss3,
   SiHtml5,
+  SiTailwindcss,
 } from 'react-icons/si';
 
 const technologiesIcons = {
@@ -22,6 +24,10 @@ const technologiesIcons = {
   sass: <SiSass key={6} />,
   css: <SiCss3 key={7} />,
   html: <SiHtml5 key={8} />,
+  tailwindcss: <SiTailwindcss key={9} />,
+  nextjs: (
+    <img src={nextjs_icon} alt='next.js icon' width='16' height='16' key={10} />
+  ),
 };
 
 const ProjectBox = ({ name, description, github, demo, technologies }) => {
@@ -37,7 +43,8 @@ const ProjectBox = ({ name, description, github, demo, technologies }) => {
             href={github}
             className='project-btn'
             target='_blank'
-            rel='noreferrer'>
+            rel='noreferrer'
+          >
             Source
           </a>
           {demo !== '' && (
@@ -45,7 +52,8 @@ const ProjectBox = ({ name, description, github, demo, technologies }) => {
               href={demo}
               className='project-btn'
               target='_blank'
-              rel='noreferrer'>
+              rel='noreferrer'
+            >
               Demo
             </a>
           )}

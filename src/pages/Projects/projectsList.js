@@ -17,11 +17,11 @@ export const projectsList = [
   },
   {
     id: 3,
-    name: 'React Weather',
-    description: 'An app for getting weather info.',
-    github: 'https://github.com/sashacozub/react-weather',
-    demo: 'https://react-weather-sc.netlify.app/',
-    technologies: ['react', 'javascript', 'css'],
+    name: 'Weather Application',
+    description: 'An app for getting weather information.',
+    github: 'https://github.com/sashacozub/weather_application',
+    demo: 'https://weather-application-five-kohl.vercel.app/',
+    technologies: ['nextjs', 'javascript', 'tailwindcss'],
   },
   {
     id: 4,
