@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import { FaHome, FaBriefcase, FaIdCardAlt, FaEnvelope } from 'react-icons/fa';
-import { SiLinkedin, SiGithub, SiCodecademy } from 'react-icons/si';
+import { SiLinkedin, SiGithub } from 'react-icons/si';
 import { GiSun, GiMoonBats } from 'react-icons/gi';
 
 import './Layout.css';
