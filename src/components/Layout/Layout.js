@@ -56,25 +56,29 @@ const Layout = ({ children }) => {
           <Link
             to='/home'
             className={pathname === '/home' ? 'active-page' : ''}
-            id='home-button'>
+            id='home-button'
+          >
             <FaHome className='nav-icon' />
           </Link>
           <Link
             to='/projects'
             className={pathname === '/projects' ? 'active-page' : ''}
-            id='projects-button'>
+            id='projects-button'
+          >
             <FaBriefcase className='nav-icon' />
           </Link>
           <Link
             to='/about'
             className={pathname === '/about' ? 'active-page' : ''}
-            id='about-button'>
+            id='about-button'
+          >
             <FaIdCardAlt className='nav-icon' />
           </Link>
           <Link
             to='/contact'
             className={pathname === '/contact' ? 'active-page' : ''}
-            id='contact-button'>
+            id='contact-button'
+          >
             <FaEnvelope className='nav-icon' />
           </Link>
         </nav>
@@ -85,20 +89,16 @@ const Layout = ({ children }) => {
           <a
             href='https://www.linkedin.com/in/alexander-cozub/'
             target='_blank'
-            rel='noreferrer'>
+            rel='noreferrer'
+          >
             <SiLinkedin className='footer-icon' />
           </a>
           <a
             href='https://github.com/sashacozub'
             target='_blank'
-            rel='noreferrer'>
+            rel='noreferrer'
+          >
             <SiGithub className='footer-icon' />
-          </a>
-          <a
-            href='https://www.codecademy.com/profiles/sashacozub'
-            target='_blank'
-            rel='noreferrer'>
-            <SiCodecademy className='footer-icon' />
           </a>
         </div>
         <div onClick={handleThemeColorChange} className='color-mode-btn'>

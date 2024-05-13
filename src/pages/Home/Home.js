@@ -12,7 +12,10 @@ import {
   SiNpm,
   SiGithub,
   SiFigma,
+  SiMysql,
+  SiTailwindcss,
 } from 'react-icons/si';
+import nextjs_icon from '../../static/nextjs_icon.png';
 
 import './Home.css';
 
@@ -26,7 +29,8 @@ const Home = () => {
           href='https://www.linkedin.com/in/alexander-cozub/'
           target='_blank'
           rel='noreferrer'
-          className='text-link'>
+          className='text-link'
+        >
           Developer
         </a>{' '}
         based in <strong>Oslo, Norway</strong>.
@@ -48,9 +52,18 @@ const Home = () => {
       </p>
       <h5>Here are some of the main skills I have:</h5>
       <div>
+        <img
+          src={nextjs_icon}
+          heigth='16'
+          width='16'
+          alt='next.js icon'
+          className='skill-icon'
+        />
         <SiReact className='skill-icon' />
         <SiRedux className='skill-icon' />
         <SiJavascript className='skill-icon' />
+        <SiMysql className='skill-icon' />
+        <SiTailwindcss className='skill-icon' />
         <SiSass className='skill-icon' />
         <SiCss3 className='skill-icon' />
         <SiHtml5 className='skill-icon' />
